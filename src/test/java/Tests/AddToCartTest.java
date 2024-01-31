@@ -19,7 +19,7 @@ import java.time.Duration;
 public class AddToCartTest extends BaseTest {
 
     @BeforeMethod
-    public void pageSetUp(){
+    public void pageSetUp() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://automationexercise.com/");
@@ -36,11 +36,10 @@ public class AddToCartTest extends BaseTest {
         wait = new WebDriverWait(driver, Duration.ofSeconds(2));
         productsPage = new ProductsPage();
         cartPage = new CartPage();
-
-
     }
+
     @Test(priority = 10)
-    public void userCanAddOneItemToCart(){
+    public void userCanAddOneItemToCart() {
         homePage.clickOnProductsButton();
         driver.navigate().refresh();
         scrollToElement(productsPage.poloButton);
@@ -50,11 +49,11 @@ public class AddToCartTest extends BaseTest {
         Assert.assertTrue(productsPage.continueShoppingButton.isDisplayed());
 
         productsPage.clickOnViewCartButton();
-        Assert.assertTrue(cartPage.firstProduct.get(0).isDisplayed());
+        Assert.assertTrue(cartPage.products.get(0).isDisplayed());
     }
 
     @Test(priority = 20)
-    public void userCanAddToCartMoreThanOneItem(){
+    public void userCanAddToCartMoreThanOneItem() {
         homePage.clickOnProductsButton();
         driver.navigate().refresh();
         scrollToElement(productsPage.poloButton);
@@ -63,7 +62,7 @@ public class AddToCartTest extends BaseTest {
         wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".btn.btn-success.close-modal.btn-block")));
         Assert.assertTrue(productsPage.continueShoppingButton.isDisplayed());
         int counter = 1;
-        for(int i = 1; i < 3; i++){
+        for (int i = 1; i < 3; i++) {
             productsPage.clickOnContinueShoppingButton();
             productsPage.clickOnAddToCartButton(i);
             wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".btn.btn-success.close-modal.btn-block")));
@@ -71,16 +70,35 @@ public class AddToCartTest extends BaseTest {
             counter++;
         }
         productsPage.clickOnViewCartButton();
-
-        for(int i = 0; i < counter; i++){
-            Assert.assertTrue(cartPage.firstProduct.get(i).isDisplayed());
+        for (int i = 0; i < counter; i++) {
+            Assert.assertTrue(cartPage.products.get(i).isDisplayed());
         }
     }
+
+    @Test(priority = 30)
+    public void userCanAddOneItemMultipleTimes() {
+        homePage.clickOnProductsButton();
+        driver.navigate().refresh();
+        scrollToElement(productsPage.poloButton);
+        int counter = 0;
+        for (int i = 0; i < 5; i++) {
+            productsPage.clickOnAddToCartButton(0);
+            wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".btn.btn-success.close-modal.btn-block")));
+            productsPage.clickOnContinueShoppingButton();
+            counter++;
+        }
+        String counterAsString = Integer.toString(counter);
+        productsPage.clickOnCartButton();
+        Assert.assertEquals(cartPage.cartQuantity.getText(), counterAsString);
+    }
+
+
     @AfterMethod
-    public void removeFromCart(){
-        for(int i = 0; i < cartPage.deleteButton.size(); i++){
+    public void removeFromCartAndTearDown() {
+        for (int i = 0; i < cartPage.deleteButton.size(); i++) {
             cartPage.clickOnDeleteButton(i);
         }
+        driver.quit();
     }
 
 }
