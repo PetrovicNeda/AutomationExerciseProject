@@ -9,19 +9,21 @@ import java.util.List;
 
 public class CartPage extends BaseTest {
 
-    public CartPage(){
+    public CartPage() {
         PageFactory.initElements(driver, this);
     }
 
     @FindBy(className = "cart_product")
-    public List<WebElement> firstProduct;
-
+    public List<WebElement> products;
     @FindBy(className = "cart_quantity_delete")
     public List<WebElement> deleteButton;
+    @FindBy(className = "cart_quantity")
+    public WebElement cartQuantity;
 
     //-------------------------------
 
-    public void clickOnDeleteButton(int i){
+    public void clickOnDeleteButton(int i) {
         deleteButton.get(i).click();
     }
+
 }

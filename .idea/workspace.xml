@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47cfc9a8-26ac-46e1-bba6-bdb2d1f4d54e" name="Changes" comment="Added BaseTest,HomePage,LoginPage,RegistrationPage,ProductsPage,write tests for login, logout, add to cart and registration">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/CartPage.java" afterDir="false" />
+    <list default="true" id="47cfc9a8-26ac-46e1-bba6-bdb2d1f4d54e" name="Changes" comment="Added elements and CartPage to BaseTest">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/BaseTest/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BaseTest/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/CartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/CartPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Pages/ProductsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/ProductsPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Tests/AddToCartTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/AddToCartTest.java" afterDir="false" />
     </list>
@@ -44,8 +43,8 @@
     &quot;last_opened_file_path&quot;: &quot;C:/Users/nelej/IdeaProjects/Selenium18&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.AddToCartTest.userCanAddToCartMoreThanOneItem">
-    <configuration name="AddToCartTest.test" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.AddToCartTest">
+    <configuration name="AddToCartTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutomationExercise" />
       <extension name="coverage">
         <pattern>
@@ -55,7 +54,24 @@
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
       <option name="MAIN_CLASS_NAME" value="Tests.AddToCartTest" />
-      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AddToCartTest.userCanAddOneItemMultipleTimes" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutomationExercise" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.AddToCartTest" />
+      <option name="METHOD_NAME" value="userCanAddOneItemMultipleTimes" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -117,31 +133,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RegistrationTest.userCanRegistrateWithAllMandatoryFieldsFilled" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutomationExercise" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.RegistrationTest" />
-      <option name="METHOD_NAME" value="userCanRegistrateWithAllMandatoryFieldsFilled" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.AddToCartTest" />
+        <item itemvalue="TestNG.AddToCartTest.userCanAddOneItemMultipleTimes" />
         <item itemvalue="TestNG.AddToCartTest.userCanAddToCartMoreThanOneItem" />
         <item itemvalue="TestNG.AddToCartTest.userCanAddOneItemToCart" />
         <item itemvalue="TestNG.AddToCartTest.userCanContinueShoppingAfterAddingItemToCart" />
-        <item itemvalue="TestNG.RegistrationTest.userCanRegistrateWithAllMandatoryFieldsFilled" />
-        <item itemvalue="TestNG.AddToCartTest.test" />
       </list>
     </recent_temporary>
   </component>
@@ -170,13 +168,40 @@
       <option name="project" value="LOCAL" />
       <updated>1706651819116</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added CartPage">
+      <option name="closed" value="true" />
+      <created>1706713472876</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1706713472876</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added test and refactor code">
+      <option name="closed" value="true" />
+      <created>1706713550379</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1706713550379</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added elements and CartPage to BaseTest">
+      <option name="closed" value="true" />
+      <created>1706713598795</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1706713598795</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Added BaseTest,HomePage,LoginPage,RegistrationPage,ProductsPage,write tests for login, logout, add to cart and registration" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added BaseTest,HomePage,LoginPage,RegistrationPage,ProductsPage,write tests for login, logout, add to cart and registration" />
+    <MESSAGE value="Added CartPage" />
+    <MESSAGE value="Added test and refactor code" />
+    <MESSAGE value="Added elements and CartPage to BaseTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added elements and CartPage to BaseTest" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -189,24 +214,6 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/Tests/AddToCartTest.java</url>
-          <line>42</line>
-          <properties class="Tests.AddToCartTest" method="userCanAddOneItemToCart">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/Tests/AddToCartTest.java</url>
-          <line>56</line>
-          <properties class="Tests.AddToCartTest" method="userCanAddToCartMoreThanOneItem">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -2,7 +2,6 @@ package Pages;
 
 import BaseTest.BaseTest;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -14,8 +13,6 @@ public class ProductsPage extends BaseTest {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(className = "single-products")
-    public List<WebElement> products;
     @FindBy(css = "a[href='/brand_products/Polo'")
     public WebElement poloButton;
     @FindBy(linkText = "Add to cart")
@@ -24,13 +21,11 @@ public class ProductsPage extends BaseTest {
     public WebElement continueShoppingButton;
     @FindBy(linkText = "View Cart")
     public WebElement viewCartButton;
+    @FindBy(css = "a[href='/view_cart']")
+    public WebElement cartButton;
 
 //-------------------------------------------
 
-//    public void hoverOverProduct(int i) {
-//        Actions actions = new Actions(driver);
-//        actions.moveToElement(products.get(i)).build().perform();
-//    }
 
     public void clickOnAddToCartButton(int i){
         addToCartButton.get(i).click();
@@ -41,6 +36,9 @@ public class ProductsPage extends BaseTest {
     }
     public void clickOnContinueShoppingButton(){
         continueShoppingButton.click();
+    }
+    public void clickOnCartButton(){
+        cartButton.click();
     }
 
 
