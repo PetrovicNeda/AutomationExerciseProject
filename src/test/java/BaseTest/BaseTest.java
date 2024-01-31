@@ -1,13 +1,11 @@
 package BaseTest;
 
-import Pages.HomePage;
-import Pages.LoginPage;
-import Pages.ProductsPage;
-import Pages.RegistrationPage;
+import Pages.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeClass;
 
@@ -21,6 +19,8 @@ public class BaseTest {
     public RegistrationPage registrationPage;
     public ProductsPage productsPage;
     public WebDriverWait wait;
+    public CartPage cartPage;
+    public Actions actions;
     @BeforeClass
     public void setUp() {
         WebDriverManager.chromedriver().setup();

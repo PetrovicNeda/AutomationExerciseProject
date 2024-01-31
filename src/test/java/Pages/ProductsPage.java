@@ -18,22 +18,30 @@ public class ProductsPage extends BaseTest {
     public List<WebElement> products;
     @FindBy(css = "a[href='/brand_products/Polo'")
     public WebElement poloButton;
-
     @FindBy(linkText = "Add to cart")
     public List<WebElement> addToCartButton;
-
     @FindBy(css = ".btn.btn-success.close-modal.btn-block")
-
     public WebElement continueShoppingButton;
+    @FindBy(linkText = "View Cart")
+    public WebElement viewCartButton;
 
 //-------------------------------------------
 
-    public void hoverOverFirstProduct() {
-        Actions actions = new Actions(driver);
-        actions.moveToElement(products.get(0)).build().perform();
+//    public void hoverOverProduct(int i) {
+//        Actions actions = new Actions(driver);
+//        actions.moveToElement(products.get(i)).build().perform();
+//    }
+
+    public void clickOnAddToCartButton(int i){
+        addToCartButton.get(i).click();
     }
 
-    public void clickOnFirstAddToCartButton(){
-        addToCartButton.get(1).click();
+    public void clickOnViewCartButton(){
+        viewCartButton.click();
     }
+    public void clickOnContinueShoppingButton(){
+        continueShoppingButton.click();
+    }
+
+
 }
