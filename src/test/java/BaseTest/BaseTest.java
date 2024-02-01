@@ -21,6 +21,9 @@ public class BaseTest {
     public WebDriverWait wait;
     public CartPage cartPage;
     public AccCreatedPage accCreatedPage;
+    public CategoryProductsPage categoryProductsPage;
+    public ProductDetailsPage productDetailsPage;
+
     @BeforeClass
     public void setUp() {
         WebDriverManager.chromedriver().setup();
