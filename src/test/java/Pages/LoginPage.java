@@ -4,11 +4,16 @@ import BaseTest.BaseTest;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+
 
 public class LoginPage extends BaseTest {
     public LoginPage() {
         PageFactory.initElements(driver, this);
     }
+
+    HomePage homePage = new HomePage();
+
 
     @FindBy(css = "input[type='email'")
     public WebElement emailField;
@@ -60,4 +65,15 @@ public class LoginPage extends BaseTest {
     public void clickOnSignupButton(){
         signupButton.click();
     }
+
+    public void logIn(){
+        String validEmail = "neda@mail.com";
+        String validPassword = "neda123!";
+        inputEmail(validEmail);
+        inputPassword(validPassword);
+        clickOnLoginButton();
+        Assert.assertTrue(homePage.logoutButton.isDisplayed());
+        Assert.assertNotEquals(driver.getCurrentUrl(), "https://automationexercise.com/login");
+    }
+
 }

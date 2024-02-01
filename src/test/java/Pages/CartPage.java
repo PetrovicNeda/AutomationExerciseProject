@@ -19,6 +19,8 @@ public class CartPage extends BaseTest {
     public List<WebElement> deleteButton;
     @FindBy(className = "cart_quantity")
     public WebElement cartQuantity;
+    @FindBy(id = "empty_cart")
+    public WebElement emptyCart;
 
     //-------------------------------
 

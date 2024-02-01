@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47cfc9a8-26ac-46e1-bba6-bdb2d1f4d54e" name="Changes" comment="Added elements">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/AccCreatedPage.java" afterDir="false" />
+    <list default="true" id="47cfc9a8-26ac-46e1-bba6-bdb2d1f4d54e" name="Changes" comment="Added new WebElements and methods">
+      <change afterPath="$PROJECT_DIR$/src/test/java/Tests/FilteringTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/BaseTest/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BaseTest/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/CartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/CartPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/RegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/RegistrationPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/RegistrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/RegistrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/ProductDetailsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/ProductDetailsPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,8 +45,8 @@
     &quot;last_opened_file_path&quot;: &quot;C:/Users/nelej/IdeaProjects/Bookstore18&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.RegistrationTest.userCannotSingupWithEmailAlreadyExist">
-    <configuration name="AddToCartTest" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.FilteringTest.test">
+    <configuration name="FilteringTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutomationExercise" />
       <extension name="coverage">
         <pattern>
@@ -55,7 +55,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.AddToCartTest" />
+      <option name="MAIN_CLASS_NAME" value="Tests.FilteringTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -63,7 +63,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AddToCartTest.userCanAddOneItemToCart" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="FilteringTest.test" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutomationExercise" />
       <extension name="coverage">
         <pattern>
@@ -72,8 +72,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.AddToCartTest" />
-      <option name="METHOD_NAME" value="userCanAddOneItemToCart" />
+      <option name="MAIN_CLASS_NAME" value="Tests.FilteringTest" />
+      <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -81,7 +81,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RegistrationTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="RegistrationTest.userCannotSingupWithEmptyMandatoryField" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutomationExercise" />
       <extension name="coverage">
         <pattern>
@@ -91,6 +91,24 @@
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
       <option name="MAIN_CLASS_NAME" value="Tests.RegistrationTest" />
+      <option name="METHOD_NAME" value="userCannotSingupWithEmptyMandatoryField" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RemoveFromCartTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutomationExercise" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.RemoveFromCartTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -98,7 +116,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RegistrationTest.userCanRegistrateWithAllMandatoryFieldsFilled" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="RemoveFromCartTest.userCanRemoveItemFromCart" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutomationExercise" />
       <extension name="coverage">
         <pattern>
@@ -107,26 +125,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.RegistrationTest" />
-      <option name="METHOD_NAME" value="userCanRegistrateWithAllMandatoryFieldsFilled" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RegistrationTest.userCannotSingupWithEmailAlreadyExist" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutomationExercise" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.RegistrationTest" />
-      <option name="METHOD_NAME" value="userCannotSingupWithEmailAlreadyExist" />
+      <option name="MAIN_CLASS_NAME" value="Tests.RemoveFromCartTest" />
+      <option name="METHOD_NAME" value="userCanRemoveItemFromCart" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -136,11 +136,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.RegistrationTest.userCannotSingupWithEmailAlreadyExist" />
-        <item itemvalue="TestNG.RegistrationTest.userCanRegistrateWithAllMandatoryFieldsFilled" />
-        <item itemvalue="TestNG.AddToCartTest.userCanAddOneItemToCart" />
-        <item itemvalue="TestNG.RegistrationTest" />
-        <item itemvalue="TestNG.AddToCartTest" />
+        <item itemvalue="TestNG.FilteringTest.test" />
+        <item itemvalue="TestNG.FilteringTest" />
+        <item itemvalue="TestNG.RemoveFromCartTest" />
+        <item itemvalue="TestNG.RegistrationTest.userCannotSingupWithEmptyMandatoryField" />
+        <item itemvalue="TestNG.RemoveFromCartTest.userCanRemoveItemFromCart" />
       </list>
     </recent_temporary>
   </component>
@@ -209,7 +209,63 @@
       <option name="project" value="LOCAL" />
       <updated>1706715907067</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added elements">
+      <option name="closed" value="true" />
+      <created>1706809678620</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1706809678621</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Added test">
+      <option name="closed" value="true" />
+      <created>1706809694576</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1706809694576</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Added class">
+      <option name="closed" value="true" />
+      <created>1706809707038</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1706809707038</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Added new pages and elements">
+      <option name="closed" value="true" />
+      <created>1706819977063</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1706819977063</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Added new test">
+      <option name="closed" value="true" />
+      <created>1706820017824</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1706820017824</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Added new tests">
+      <option name="closed" value="true" />
+      <created>1706820062265</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1706820062265</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Added new WebElements and methods">
+      <option name="closed" value="true" />
+      <created>1706820134984</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1706820134984</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -218,9 +274,14 @@
     <MESSAGE value="Added CartPage" />
     <MESSAGE value="Added test and refactor code" />
     <MESSAGE value="Added elements and CartPage to BaseTest" />
-    <MESSAGE value="Added test" />
     <MESSAGE value="Added elements" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added elements" />
+    <MESSAGE value="Added test" />
+    <MESSAGE value="Added class" />
+    <MESSAGE value="Added new pages and elements" />
+    <MESSAGE value="Added new test" />
+    <MESSAGE value="Added new tests" />
+    <MESSAGE value="Added new WebElements and methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added new WebElements and methods" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

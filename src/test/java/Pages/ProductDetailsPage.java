@@ -10,6 +10,6 @@ public class ProductDetailsPage extends BaseTest {
     public ProductDetailsPage(){
         PageFactory.initElements(driver, this);
     }
-    @FindBy(tagName = "p")
+    @FindBy(className = "product-information")
     public WebElement dressCategory;
 }
