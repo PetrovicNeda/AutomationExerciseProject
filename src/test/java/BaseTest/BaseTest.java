@@ -20,7 +20,7 @@ public class BaseTest {
     public ProductsPage productsPage;
     public WebDriverWait wait;
     public CartPage cartPage;
-    public Actions actions;
+    public AccCreatedPage accCreatedPage;
     @BeforeClass
     public void setUp() {
         WebDriverManager.chromedriver().setup();

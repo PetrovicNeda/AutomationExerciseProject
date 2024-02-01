@@ -1,7 +1,6 @@
 package Pages;
 
 import BaseTest.BaseTest;
-import org.apache.commons.logging.Log;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -30,6 +29,8 @@ public class LoginPage extends BaseTest {
     public WebElement emailForSignup;
     @FindBy(css = "button[data-qa='signup-button'")
     public WebElement signupButton;
+    @FindBy(css = "p[style='color: red;'")
+    public WebElement errorSignupMessage;
 
     //-----------------------------------
 
