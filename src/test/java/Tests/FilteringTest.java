@@ -15,7 +15,7 @@ import java.time.Duration;
 public class FilteringTest extends BaseTest {
 
     @BeforeMethod
-    public void pageSetUp(){
+    public void pageSetUp() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://automationexercise.com/");
@@ -32,19 +32,29 @@ public class FilteringTest extends BaseTest {
         productDetailsPage = new ProductDetailsPage();
 
     }
+
     @Test(priority = 10)
-    public void verifyThatItemsInSubcategoryDressesAreDresses(){
+    public void verifyThatItemsInSubcategoryDressesAreDresses() {
         productsPage.clickOnCategory(0);
         wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a[href='/category_products/1'")));
-        productsPage.clickOnDressCategoryButton();
-        for(int i = 0; i < categoryProductsPage.viewProductButtons.size();i++){
-            categoryProductsPage.clickOnViewProductButton(i);
-            String text = productDetailsPage.dressCategory.getText();
-            Assert.assertTrue(text.contains("Dress"));
-            driver.navigate().back();
-        }
+        productsPage.clickOnDressSubcategoryButton();
+        productDetailsPage.checkingItemsInSubcategory("Dress");
+    }
 
+    @Test(priority = 20)
+    public void verifyThatItemsInSubcategoryTopsAreTops() {
+        productsPage.clickOnCategory(0);
+        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a[href='/category_products/1'")));
+        productsPage.clickOnTopsSubcategoryButton();
+        productDetailsPage.checkingItemsInSubcategory("Tops");
+    }
 
+    @Test(priority = 30)
+    public void verifyThatItemsInSubcategoryTShirtsAreTShirts() {
+        productsPage.clickOnCategory(1);
+        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a[href='/category_products/3'")));
+        productsPage.clickOnTShirtsSubcategoryButton();
+        productDetailsPage.checkingItemsInSubcategory("Tshirts");
     }
 
 }
