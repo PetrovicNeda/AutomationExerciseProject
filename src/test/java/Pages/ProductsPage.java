@@ -33,8 +33,12 @@ public class ProductsPage extends BaseTest {
     @FindBy(css = ".badge.pull-right")
     public List<WebElement> category;
     @FindBy(css = "a[href='/category_products/1'")
-    public WebElement dressCategoryButton;
+    public WebElement dressSubcategoryButton;
+    @FindBy(css = "a[href='/category_products/2'")
+    public WebElement topsSubcategoryButton;
+    @FindBy(css = "a[href='/category_products/3'")
 
+    public WebElement tshirtsSubcategoryButton;
 //-------------------------------------------
 
 
@@ -64,8 +68,14 @@ public class ProductsPage extends BaseTest {
     public void clickOnCategory(int j){
             category.get(j).click();
     }
-    public void clickOnDressCategoryButton(){
-        dressCategoryButton.click();
+    public void clickOnDressSubcategoryButton(){
+        dressSubcategoryButton.click();
+    }
+    public void clickOnTopsSubcategoryButton(){
+        topsSubcategoryButton.click();
+    }
+    public void clickOnTShirtsSubcategoryButton(){
+        tshirtsSubcategoryButton.click();
     }
 
 }

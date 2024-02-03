@@ -19,6 +19,8 @@ public class HomePage extends BaseTest {
 
     @FindBy(css = "a[href='/products'")
     public WebElement productsButton;
+    @FindBy(css = "a[href='/contact_us'")
+    public WebElement contactButton;
 
 
     //-----------------------------
@@ -32,5 +34,7 @@ public class HomePage extends BaseTest {
     public void clickOnProductsButton(){
         productsButton.click();
     }
-
+    public void clickOnContactButton(){
+        contactButton.click();
+    }
 }

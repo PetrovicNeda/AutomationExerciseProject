@@ -21,11 +21,16 @@ public class CartPage extends BaseTest {
     public WebElement cartQuantity;
     @FindBy(id = "empty_cart")
     public WebElement emptyCart;
+    @FindBy(css = ".btn.btn-default.check_out")
+    public WebElement proceedToCheckoutButton;
 
     //-------------------------------
 
     public void clickOnDeleteButton(int i) {
         deleteButton.get(i).click();
+    }
+    public void clickOnProceedToCheckoutButton(){
+        proceedToCheckoutButton.click();
     }
 
 }

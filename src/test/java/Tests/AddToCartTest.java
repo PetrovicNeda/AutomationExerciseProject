@@ -53,7 +53,7 @@ public class AddToCartTest extends BaseTest {
     }
 
     @Test(priority = 20)
-    public void userCanAddToCartMoreThanOneItem() {
+    public void userCanAddToCartMultipleItems() {
         homePage.clickOnProductsButton();
         driver.navigate().refresh();
         scrollToElement(productsPage.poloButton);
