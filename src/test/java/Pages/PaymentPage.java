@@ -1,15 +1,20 @@
 package Pages;
 
 import BaseTest.BaseTest;
+import BaseTest.ExcelReader;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import java.io.IOException;
+import java.util.Random;
 
 public class PaymentPage extends BaseTest {
 
     public PaymentPage() {
         PageFactory.initElements(driver, this);
     }
+
     @FindBy(className = "form-control")
     public WebElement nameOnCardField;
     @FindBy(css = ".form-control.card-number")
@@ -54,5 +59,17 @@ public class PaymentPage extends BaseTest {
 
     public void clickOnPayAndConfirmButton() {
         payAndConfirmButton.click();
+    }
+
+    public void fillPaymentFormWithDataFromExcelFile(String sheetName) throws IOException {
+        excelReader = new ExcelReader("TestData.xlsx");
+        Random random = new Random();
+        int customer = random.nextInt(1, excelReader.getLastRow(sheetName));
+        inputNameOnCard(excelReader.getStringData(sheetName, customer, 0));
+        inputCardNumber(excelReader.getStringData(sheetName, customer, 1));
+        inputCvc(String.valueOf(excelReader.getIntegerData(sheetName, customer, 2)));
+        inputExpirationMonth(String.valueOf(excelReader.getIntegerData(sheetName, customer, 3)));
+        inputExpirationYear(String.valueOf(excelReader.getIntegerData(sheetName, customer, 4)));
+        clickOnPayAndConfirmButton();
     }
 }

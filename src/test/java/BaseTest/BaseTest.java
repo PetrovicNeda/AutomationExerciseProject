@@ -11,6 +11,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
+import java.io.IOException;
 import java.time.Duration;
 
 public class BaseTest {
@@ -29,12 +30,13 @@ public class BaseTest {
     public PaymentPage paymentPage;
     public ContactFormPage contactFormPage;
     public DeleteAccPage deleteAccPage;
+    public ExcelReader excelReader;
     @BeforeClass
-    public void setUp() {
+    public void setUp()  {
         WebDriverManager.chromedriver().setup();
     }
     @BeforeMethod
-    public void before() {
+    public void before() throws IOException {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://automationexercise.com/");
@@ -42,6 +44,7 @@ public class BaseTest {
         homePage = new HomePage();
         homePage.clickOnLoginSignupButton();
         loginPage = new LoginPage();
+        excelReader = new ExcelReader("TestData.xlsx");
     }
 
     public void scrollToElement(WebElement element) {

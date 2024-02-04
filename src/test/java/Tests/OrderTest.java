@@ -9,6 +9,8 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
+
 import static Pages.LoginPage.USER_EMAIL;
 import static Pages.LoginPage.USER_PASSWORD;
 
@@ -26,46 +28,22 @@ public class OrderTest extends BaseTest {
     }
 
     @Test(priority = 10)
-    public void userCanOrderItem() {
+    public void userCanOrderItem() throws IOException {
         cartPage.clickOnProceedToCheckoutButton();
         Assert.assertEquals(driver.getCurrentUrl(), "https://automationexercise.com/checkout");
         scrollToElement(checkoutPage.placeOrderButton);
         checkoutPage.clickOnPlaceOrderButton();
-
-        String name = "Neda";
-        String cardNumber = "236-52158-125";
-        String cvc = "100";
-        String expMonth = "10";
-        String expYear = "2025";
-
-        paymentPage.inputNameOnCard(name);
-        paymentPage.inputCardNumber(cardNumber);
-        paymentPage.inputCvc(cvc);
-        paymentPage.inputExpirationMonth(expMonth);
-        paymentPage.inputExpirationYear(expYear);
-        paymentPage.clickOnPayAndConfirmButton();
-
+        paymentPage.fillPaymentFormWithDataFromExcelFile("Data");
         Assert.assertEquals(paymentPage.message.getText(), "Congratulations! Your order has been confirmed!");
     }
 
     @Test(priority = 20)
-    public void userCannotPayIfNameFieldsOnPaymentPageIsNotFilled() {
+    public void userCannotPayIfNameFieldsOnPaymentPageIsNotFilled() throws IOException {
         cartPage.clickOnProceedToCheckoutButton();
         Assert.assertEquals(driver.getCurrentUrl(), "https://automationexercise.com/checkout");
         scrollToElement(checkoutPage.placeOrderButton);
         checkoutPage.clickOnPlaceOrderButton();
-
-        String cardNumber = "236-52158-125";
-        String cvc = "100";
-        String expMonth = "10";
-        String expYear = "2025";
-
-        paymentPage.inputCardNumber(cardNumber);
-        paymentPage.inputCvc(cvc);
-        paymentPage.inputExpirationMonth(expMonth);
-        paymentPage.inputExpirationYear(expYear);
-        paymentPage.clickOnPayAndConfirmButton();
-
+        paymentPage.fillPaymentFormWithDataFromExcelFile("InvalidForm");
         Assert.assertEquals(driver.getCurrentUrl(), "https://automationexercise.com/payment");
     }
 }
