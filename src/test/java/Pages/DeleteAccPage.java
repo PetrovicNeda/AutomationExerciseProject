@@ -6,9 +6,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class DeleteAccPage extends BaseTest {
-    public DeleteAccPage(){
+    public DeleteAccPage() {
         PageFactory.initElements(driver, this);
     }
+
     @FindBy(css = ".title.text-center")
     public WebElement deleteMessage;
 }

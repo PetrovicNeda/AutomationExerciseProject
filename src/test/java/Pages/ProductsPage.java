@@ -45,7 +45,6 @@ public class ProductsPage extends BaseTest {
 
 //-------------------------------------------
 
-
     public void clickOnAddToCartButton(int i) {
         addToCartButton.get(i).click();
     }
@@ -92,9 +91,5 @@ public class ProductsPage extends BaseTest {
     public void inputTextInSearchBox(String s) {
         searchBox.clear();
         searchBox.sendKeys(s);
-    }
-
-    public void clickOnSearchButton() {
-        searchButton.click();
     }
 }

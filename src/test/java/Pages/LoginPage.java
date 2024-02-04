@@ -11,25 +11,16 @@ public class LoginPage extends BaseTest {
     public LoginPage() {
         PageFactory.initElements(driver, this);
     }
-
-    HomePage homePage = new HomePage();
-
-
     @FindBy(css = "input[type='email'")
     public WebElement emailField;
-
     @FindBy(css = "input[type='password'")
     public WebElement passwordField;
-
     @FindBy(css = "button[type='submit'")
     public WebElement loginButton;
-
     @FindBy(tagName = "p")
     public WebElement errorMessage;
-
     @FindBy(css = "input[type='text']")
     public WebElement nameFieldForSignup;
-
     @FindBy(css = "input[data-qa='signup-email'")
     public WebElement emailForSignup;
     @FindBy(css = "button[data-qa='signup-button'")
@@ -39,7 +30,6 @@ public class LoginPage extends BaseTest {
 
     public static final String USER_EMAIL = "neda@mail.com";
     public static final String USER_PASSWORD = "neda123!";
-
     public static final String EMAIL_FOR_REGISTRATION_AND_DELETING = "korisnik@mail.com";
     public static final String PASSWORD_FOR_REGISTRATION_AND_DELETING = "korisnik123";
 
@@ -71,16 +61,9 @@ public class LoginPage extends BaseTest {
     public void clickOnSignupButton(){
         signupButton.click();
     }
-//
-//    public void logInAndAssert(){
-//        inputEmail(USER_EMAIL);
-//        inputPassword(USER_PASSWORD);
-//        clickOnLoginButton();
-//        Assert.assertTrue(homePage.logoutButton.isDisplayed());
-//        Assert.assertNotEquals(driver.getCurrentUrl(), "https://automationexercise.com/login");
-//    }
 
     public void logInAndAssert(String email, String password){
+        HomePage homePage = new HomePage();
         inputEmail(email);
         inputPassword(password);
         clickOnLoginButton();

@@ -4,22 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47cfc9a8-26ac-46e1-bba6-bdb2d1f4d54e" name="Changes" comment="Added test for deleting account">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/BaseTest/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BaseTest/BaseTest.java" afterDir="false" />
+    <list default="true" id="47cfc9a8-26ac-46e1-bba6-bdb2d1f4d54e" name="Changes" comment="Refactored BeforeMethods and added clickAndCloseVignette method">
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/CheckoutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/CheckoutPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/ContactFormPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/ContactFormPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/DeleteAccPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/DeleteAccPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/HomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/ProductDetailsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/ProductDetailsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/ProductsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/ProductsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/AddToCartTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/AddToCartTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/ContactFormTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/ContactFormTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/DeleteAccTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/DeleteAccTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/FilteringTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/FilteringTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/LoginTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/LogoutTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/LogoutTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/OrderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/OrderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/RegistrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/RegistrationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/RemoveFromCartTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/RemoveFromCartTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/SearchBoxTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/SearchBoxTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,8 +49,8 @@
     &quot;last_opened_file_path&quot;: &quot;C:/Users/nelej/IdeaProjects/Selenium18&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.SearchBoxTest">
-    <configuration name="OrderTest.userCanOrderItem" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.LoginTest.userCanLogInWithValidCredentials">
+    <configuration name="LoginTest.userCanLogInWithValidCredentials" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutomationExercise" />
       <extension name="coverage">
         <pattern>
@@ -69,8 +59,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.OrderTest" />
-      <option name="METHOD_NAME" value="userCanOrderItem" />
+      <option name="MAIN_CLASS_NAME" value="Tests.LoginTest" />
+      <option name="METHOD_NAME" value="userCanLogInWithValidCredentials" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -149,11 +139,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.LoginTest.userCanLogInWithValidCredentials" />
         <item itemvalue="TestNG.SearchBoxTest" />
         <item itemvalue="TestNG.RemoveFromCartTest" />
         <item itemvalue="TestNG.RegistrationTest.userCannotSingupWithEmptyMandatoryField" />
         <item itemvalue="TestNG.RegistrationTest" />
-        <item itemvalue="TestNG.OrderTest.userCanOrderItem" />
       </list>
     </recent_temporary>
   </component>
@@ -358,7 +348,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707059049262</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Refactored BeforeMethods and added clickAndCloseVignette method">
+      <option name="closed" value="true" />
+      <created>1707075184887</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1707075184887</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -383,7 +381,8 @@
     <MESSAGE value="Added ContactFormTest," />
     <MESSAGE value="Added test for search box" />
     <MESSAGE value="Added test for deleting account" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added test for deleting account" />
+    <MESSAGE value="Refactored BeforeMethods and added clickAndCloseVignette method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored BeforeMethods and added clickAndCloseVignette method" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -405,6 +404,11 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/Tests/LoginTest.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

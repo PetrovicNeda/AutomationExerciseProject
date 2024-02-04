@@ -14,7 +14,4 @@ public class AccCreatedPage extends BaseTest {
     public WebElement continueButton;
     @FindBy(css = ".title.text-center")
     public WebElement message;
-
-    //-----------------------
-
 }

@@ -26,28 +26,34 @@ public class ContactFormPage extends BaseTest {
     public WebElement submitButton;
     @FindBy(css = ".status.alert.alert-success")
     public WebElement message;
+
     //-----------------------------
 
-    public void inputName(String name){
+    public void inputName(String name) {
         nameField.clear();
         nameField.sendKeys(name);
     }
-    public void inputMail(String email){
+
+    public void inputMail(String email) {
         emailField.clear();
         emailField.sendKeys(email);
     }
-    public void inputSubject(String subject){
+
+    public void inputSubject(String subject) {
         subjectField.clear();
         subjectField.sendKeys(subject);
     }
-    public void inputMessage(String message){
+
+    public void inputMessage(String message) {
         messageField.clear();
         messageField.sendKeys(message);
     }
-    public void uploadImage(){
+
+    public void uploadImage() {
         chooseFileButton.sendKeys(imageLocation);
     }
-    public void clickOnSubmitButton(){
+
+    public void clickOnSubmitButton() {
         submitButton.click();
     }
 }

@@ -12,14 +12,12 @@ public class RegistrationPage extends BaseTest {
         PageFactory.initElements(driver, this);
     }
 
-    //    @FindBy(css = "input[type='password']")
     @FindBy(id = "password")
     public WebElement passwordField;
     @FindBy(id = "first_name")
     public WebElement firstNameField;
     @FindBy(id = "last_name")
     public WebElement lastNameField;
-
     @FindBy(id = "address1")
     public WebElement addressField;
     @FindBy(id = "country")
@@ -35,8 +33,6 @@ public class RegistrationPage extends BaseTest {
     @FindBy(css = "button[type='submit'")
     public WebElement createAccButton;
 
-
-
     //-------------------------------------
 
     public void inputPassword(String password) {
@@ -49,39 +45,44 @@ public class RegistrationPage extends BaseTest {
         firstNameField.sendKeys(name);
     }
 
-    public void inputLastName(String lastName){
+    public void inputLastName(String lastName) {
         lastNameField.clear();
         lastNameField.sendKeys(lastName);
     }
 
-    public void inputAddress(String address){
+    public void inputAddress(String address) {
         addressField.clear();
         addressField.sendKeys(address);
     }
 
-    public void clickOnCountryDropDownMenu(String countryName){
+    public void clickOnCountryDropDownMenu(String countryName) {
         countryDropDown.click();
         Select selectCountry = new Select(countryDropDown);
         selectCountry.selectByValue(countryName);
         countryDropDown.click();
     }
-    public void inputState(String state){
+
+    public void inputState(String state) {
         stateField.clear();
         stateField.sendKeys(state);
     }
-    public void inputCity(String city){
+
+    public void inputCity(String city) {
         cityField.clear();
         cityField.sendKeys(city);
     }
-    public void inputZipcode(String zipcode){
+
+    public void inputZipcode(String zipcode) {
         zipcodeField.clear();
         zipcodeField.sendKeys(zipcode);
     }
-    public void inputMobile(String mobile){
+
+    public void inputMobile(String mobile) {
         mobileNumberField.clear();
         mobileNumberField.sendKeys(mobile);
     }
-    public void clickOnCreateAccButton(){
+
+    public void clickOnCreateAccButton() {
         createAccButton.click();
     }
 

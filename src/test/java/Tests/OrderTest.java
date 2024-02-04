@@ -1,8 +1,10 @@
 package Tests;
 
 import BaseTest.BaseTest;
-import Pages.*;
-import org.openqa.selenium.chrome.ChromeDriver;
+import Pages.CartPage;
+import Pages.CheckoutPage;
+import Pages.PaymentPage;
+import Pages.ProductsPage;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -13,7 +15,7 @@ import static Pages.LoginPage.USER_PASSWORD;
 public class OrderTest extends BaseTest {
 
     @BeforeMethod
-    public void pageSetUp(){
+    public void pageSetUp() {
         loginPage.logInAndAssert(USER_EMAIL, USER_PASSWORD);
         productsPage = new ProductsPage();
         cartPage = new CartPage();
@@ -24,7 +26,7 @@ public class OrderTest extends BaseTest {
     }
 
     @Test(priority = 10)
-    public void userCanOrderItem(){
+    public void userCanOrderItem() {
         cartPage.clickOnProceedToCheckoutButton();
         Assert.assertEquals(driver.getCurrentUrl(), "https://automationexercise.com/checkout");
         scrollToElement(checkoutPage.placeOrderButton);
@@ -47,7 +49,7 @@ public class OrderTest extends BaseTest {
     }
 
     @Test(priority = 20)
-    public void userCannotPayIfNameFieldsOnPaymentPageIsNotFilled(){
+    public void userCannotPayIfNameFieldsOnPaymentPageIsNotFilled() {
         cartPage.clickOnProceedToCheckoutButton();
         Assert.assertEquals(driver.getCurrentUrl(), "https://automationexercise.com/checkout");
         scrollToElement(checkoutPage.placeOrderButton);
@@ -64,6 +66,6 @@ public class OrderTest extends BaseTest {
         paymentPage.inputExpirationYear(expYear);
         paymentPage.clickOnPayAndConfirmButton();
 
-        Assert.assertEquals(driver.getCurrentUrl(),"https://automationexercise.com/payment");
+        Assert.assertEquals(driver.getCurrentUrl(), "https://automationexercise.com/payment");
     }
 }

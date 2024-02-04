@@ -13,10 +13,8 @@ public class HomePage extends BaseTest {
 
     @FindBy(css = "a[href='/login'")
     public WebElement loginSignupButton;
-
     @FindBy(css = "a[href='/logout'")
     public WebElement logoutButton;
-
     @FindBy(css = "a[href='/products'")
     public WebElement productsButton;
     @FindBy(css = "a[href='/contact_us'")
@@ -24,22 +22,17 @@ public class HomePage extends BaseTest {
     @FindBy(css = "a[href='/delete_account'")
     public WebElement deleteAccButton;
 
-
     //-----------------------------
 
     public void clickOnLoginSignupButton() {
         loginSignupButton.click();
     }
-    public void clickOnLogoutButton(){
+
+    public void clickOnLogoutButton() {
         logoutButton.click();
     }
-    public void clickOnProductsButton(){
-        productsButton.click();
-    }
-    public void clickOnContactButton(){
+
+    public void clickOnContactButton() {
         contactButton.click();
-    }
-    public void clickOnDeleteAccButton(){
-        deleteAccButton.click();
     }
 }
