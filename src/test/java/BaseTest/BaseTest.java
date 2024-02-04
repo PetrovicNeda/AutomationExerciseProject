@@ -31,10 +31,12 @@ public class BaseTest {
     public ContactFormPage contactFormPage;
     public DeleteAccPage deleteAccPage;
     public ExcelReader excelReader;
+
     @BeforeClass
-    public void setUp()  {
+    public void setUp() {
         WebDriverManager.chromedriver().setup();
     }
+
     @BeforeMethod
     public void before() throws IOException {
         driver = new ChromeDriver();
@@ -51,21 +53,23 @@ public class BaseTest {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView(true);", element);
     }
-    public void clickOnElementAndCloseVignette(WebElement elementToClick){
+
+    public void clickOnElementAndCloseVignette(WebElement elementToClick) {
         elementToClick.click();
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("const elements = document.getElementsByClassName" +
                 "('adsbygoogle adsbygoogle-noablate'); while (elements.length > 0) elements[0].remove()");
         elementToClick.click();
     }
-    public void closeVignette(){
+
+    public void closeVignette() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("const elements = document.getElementsByClassName" +
                 "('adsbygoogle adsbygoogle-noablate'); while (elements.length > 0) elements[0].remove()");
     }
 
     @AfterMethod
-    public void tearDown(){
+    public void tearDown() {
         driver.quit();
     }
 }

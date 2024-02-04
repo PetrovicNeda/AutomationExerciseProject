@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47cfc9a8-26ac-46e1-bba6-bdb2d1f4d54e" name="Changes" comment="Refactored registration tests and methods">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="47cfc9a8-26ac-46e1-bba6-bdb2d1f4d54e" name="Changes" comment="Refactored tests and methods for ordering and using data from Excel file">
       <change beforePath="$PROJECT_DIR$/src/test/java/BaseTest/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BaseTest/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/PaymentPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/PaymentPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/OrderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/OrderTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -369,11 +366,18 @@
       <option name="project" value="LOCAL" />
       <updated>1707085085436</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Refactored tests and methods for ordering and using data from Excel file">
+      <option name="closed" value="true" />
+      <created>1707089129423</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1707089129424</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Initial commit" />
     <MESSAGE value="Added BaseTest,HomePage,LoginPage,RegistrationPage,ProductsPage,write tests for login, logout, add to cart and registration" />
     <MESSAGE value="Added CartPage" />
     <MESSAGE value="Added test and refactor code" />
@@ -397,7 +401,9 @@
     <MESSAGE value="Refactored BeforeMethods and added clickAndCloseVignette method" />
     <MESSAGE value="Formatted and removed unused code" />
     <MESSAGE value="Refactored registration tests and methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored registration tests and methods" />
+    <MESSAGE value="Refactored tests and methods for ordering and using data from excel file" />
+    <MESSAGE value="Refactored tests and methods for ordering and using data from Excel file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored tests and methods for ordering and using data from Excel file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -433,11 +439,6 @@
           <url>file://$PROJECT_DIR$/src/test/java/Tests/AddToCartTest.java</url>
           <line>40</line>
           <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/BaseTest/BaseTest.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/Tests/OrderTest.java</url>

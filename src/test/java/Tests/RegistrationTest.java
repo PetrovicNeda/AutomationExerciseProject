@@ -17,7 +17,7 @@ public class RegistrationTest extends BaseTest {
         accCreatedPage = new AccCreatedPage();
     }
 
-    @Test
+    @Test(priority = 10)
     public void userCanRegisterWithAllMandatoryFieldsFilled() {
         loginPage.inputNameForSignup(registrationPage.name);
         loginPage.inputEmailForSignup(EMAIL_FOR_REGISTRATION_AND_DELETING);
