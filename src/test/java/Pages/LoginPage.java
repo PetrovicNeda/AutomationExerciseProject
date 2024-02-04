@@ -37,6 +37,12 @@ public class LoginPage extends BaseTest {
     @FindBy(css = "p[style='color: red;'")
     public WebElement errorSignupMessage;
 
+    public static final String USER_EMAIL = "neda@mail.com";
+    public static final String USER_PASSWORD = "neda123!";
+
+    public static final String EMAIL_FOR_REGISTRATION_AND_DELETING = "korisnik@mail.com";
+    public static final String PASSWORD_FOR_REGISTRATION_AND_DELETING = "korisnik123";
+
     //-----------------------------------
 
     public void inputEmail(String email) {
@@ -65,17 +71,16 @@ public class LoginPage extends BaseTest {
     public void clickOnSignupButton(){
         signupButton.click();
     }
+//
+//    public void logInAndAssert(){
+//        inputEmail(USER_EMAIL);
+//        inputPassword(USER_PASSWORD);
+//        clickOnLoginButton();
+//        Assert.assertTrue(homePage.logoutButton.isDisplayed());
+//        Assert.assertNotEquals(driver.getCurrentUrl(), "https://automationexercise.com/login");
+//    }
 
-    public void logIn(){
-        String validEmail = "neda@mail.com";
-        String validPassword = "neda123!";
-        inputEmail(validEmail);
-        inputPassword(validPassword);
-        clickOnLoginButton();
-        Assert.assertTrue(homePage.logoutButton.isDisplayed());
-        Assert.assertNotEquals(driver.getCurrentUrl(), "https://automationexercise.com/login");
-    }
-    public void logIn(String email, String password){
+    public void logInAndAssert(String email, String password){
         inputEmail(email);
         inputPassword(password);
         clickOnLoginButton();
@@ -83,4 +88,11 @@ public class LoginPage extends BaseTest {
         Assert.assertNotEquals(driver.getCurrentUrl(), "https://automationexercise.com/login");
     }
 
+    public void logInInvalidAndAssert(String email, String password){
+        inputEmail(email);
+        inputPassword(password);
+        clickOnLoginButton();
+        Assert.assertEquals(driver.getCurrentUrl(), "https://automationexercise.com/login");
+        Assert.assertTrue(errorMessage.isDisplayed());
+    }
 }

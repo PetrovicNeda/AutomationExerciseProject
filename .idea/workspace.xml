@@ -4,15 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47cfc9a8-26ac-46e1-bba6-bdb2d1f4d54e" name="Changes" comment="Added test for search box">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/DeleteAccPage.java" afterDir="false" />
+    <list default="true" id="47cfc9a8-26ac-46e1-bba6-bdb2d1f4d54e" name="Changes" comment="Added test for deleting account">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/BaseTest/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BaseTest/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/AccCreatedPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/AccCreatedPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/HomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/ProductDetailsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/ProductDetailsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/ProductsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/ProductsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/AddToCartTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/AddToCartTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/ContactFormTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/ContactFormTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Tests/DeleteAccTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/DeleteAccTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/FilteringTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/FilteringTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/LoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/LogoutTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/LogoutTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/OrderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/OrderTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Tests/RegistrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/RegistrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/RemoveFromCartTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/RemoveFromCartTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/SearchBoxTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/SearchBoxTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +35,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JavaAutoRunManager">
+    <enabled-run-configurations>
+      <run-configuration type="TestNG" name="AddToCartTest" />
+    </enabled-run-configurations>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
@@ -47,8 +59,8 @@
     &quot;last_opened_file_path&quot;: &quot;C:/Users/nelej/IdeaProjects/Selenium18&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.DeleteAccTest.userCanDeleteAccount">
-    <configuration name="DeleteAccTest" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.SearchBoxTest">
+    <configuration name="OrderTest.userCanOrderItem" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutomationExercise" />
       <extension name="coverage">
         <pattern>
@@ -57,25 +69,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.DeleteAccTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DeleteAccTest.userCanDeleteAccount" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutomationExercise" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.DeleteAccTest" />
-      <option name="METHOD_NAME" value="userCanDeleteAccount" />
+      <option name="MAIN_CLASS_NAME" value="Tests.OrderTest" />
+      <option name="METHOD_NAME" value="userCanOrderItem" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -83,7 +78,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RegistrationTest.userCanRegistrateWithAllMandatoryFieldsFilled" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="RegistrationTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutomationExercise" />
       <extension name="coverage">
         <pattern>
@@ -93,7 +88,24 @@
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
       <option name="MAIN_CLASS_NAME" value="Tests.RegistrationTest" />
-      <option name="METHOD_NAME" value="userCanRegistrateWithAllMandatoryFieldsFilled" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegistrationTest.userCannotSingupWithEmptyMandatoryField" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutomationExercise" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.RegistrationTest" />
+      <option name="METHOD_NAME" value="userCannotSingupWithEmptyMandatoryField" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -101,7 +113,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchBoxTest.test" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="RemoveFromCartTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutomationExercise" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.RemoveFromCartTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SearchBoxTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutomationExercise" />
       <extension name="coverage">
         <pattern>
@@ -111,26 +140,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
       <option name="MAIN_CLASS_NAME" value="Tests.SearchBoxTest" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SearchBoxTest.verifyThatWhenUserSearchForSpecificSubcategoryOnlyItemsFromThatSubcategoryAreDisplayed" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutomationExercise" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.SearchBoxTest" />
-      <option name="METHOD_NAME" value="verifyThatWhenUserSearchForSpecificSubcategoryOnlyItemsFromThatSubcategoryAreDisplayed" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -139,11 +149,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.DeleteAccTest.userCanDeleteAccount" />
-        <item itemvalue="TestNG.RegistrationTest.userCanRegistrateWithAllMandatoryFieldsFilled" />
-        <item itemvalue="TestNG.DeleteAccTest" />
-        <item itemvalue="TestNG.SearchBoxTest.verifyThatWhenUserSearchForSpecificSubcategoryOnlyItemsFromThatSubcategoryAreDisplayed" />
-        <item itemvalue="TestNG.SearchBoxTest.test" />
+        <item itemvalue="TestNG.SearchBoxTest" />
+        <item itemvalue="TestNG.RemoveFromCartTest" />
+        <item itemvalue="TestNG.RegistrationTest.userCannotSingupWithEmptyMandatoryField" />
+        <item itemvalue="TestNG.RegistrationTest" />
+        <item itemvalue="TestNG.OrderTest.userCanOrderItem" />
       </list>
     </recent_temporary>
   </component>
@@ -340,7 +350,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707055857317</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Added test for deleting account">
+      <option name="closed" value="true" />
+      <created>1707059049262</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1707059049262</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -364,15 +382,29 @@
     <MESSAGE value="Added method checkingItemsInSubcategory" />
     <MESSAGE value="Added ContactFormTest," />
     <MESSAGE value="Added test for search box" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added test for search box" />
+    <MESSAGE value="Added test for deleting account" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added test for deleting account" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/Tests/DeleteAccTest.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="6" />
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/Tests/FilteringTest.java</url>
+          <line>35</line>
+          <properties class="Tests.FilteringTest" method="verifyThatItemsInSubcategoryTopsAreTops">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/Tests/RegistrationTest.java</url>
+          <line>22</line>
+          <properties class="Tests.RegistrationTest" method="userCanRegistrateWithAllMandatoryFieldsFilled">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

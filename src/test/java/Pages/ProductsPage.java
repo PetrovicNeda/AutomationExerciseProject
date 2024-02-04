@@ -46,20 +46,23 @@ public class ProductsPage extends BaseTest {
 //-------------------------------------------
 
 
-    public void clickOnAddToCartButton(int i){
+    public void clickOnAddToCartButton(int i) {
         addToCartButton.get(i).click();
     }
 
-    public void clickOnViewCartButton(){
+    public void clickOnViewCartButton() {
         viewCartButton.click();
     }
-    public void clickOnContinueShoppingButton(){
+
+    public void clickOnContinueShoppingButton() {
         continueShoppingButton.click();
     }
-    public void clickOnCartButton(){
+
+    public void clickOnCartButton() {
         cartButton.click();
     }
-    public void addItemToCartAndOpetCart(){
+
+    public void addItemToCartAndOpetCart() {
         scrollToElement(poloButton);
         clickOnAddToCartButton(0);
         wait = new WebDriverWait(driver, Duration.ofSeconds(2));
@@ -69,23 +72,29 @@ public class ProductsPage extends BaseTest {
         clickOnViewCartButton();
         Assert.assertTrue(cartPage.products.get(0).isDisplayed());
     }
-    public void clickOnCategory(int j){
-            category.get(j).click();
+
+    public void clickOnCategory(int j) {
+        category.get(j).click();
     }
-    public void clickOnDressSubcategoryButton(){
+
+    public void clickOnDressSubcategoryButton() {
         dressSubcategoryButton.click();
     }
-    public void clickOnTopsSubcategoryButton(){
+
+    public void clickOnTopsSubcategoryButton() {
         topsSubcategoryButton.click();
     }
-    public void clickOnTShirtsSubcategoryButton(){
+
+    public void clickOnTShirtsSubcategoryButton() {
         tshirtsSubcategoryButton.click();
     }
-    public void inputTextInSearchBox(String s){
+
+    public void inputTextInSearchBox(String s) {
         searchBox.clear();
         searchBox.sendKeys(s);
     }
-    public void clickOnSearchButton(){
+
+    public void clickOnSearchButton() {
         searchButton.click();
     }
 }

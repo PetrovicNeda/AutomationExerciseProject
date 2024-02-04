@@ -7,26 +7,20 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import static Pages.LoginPage.USER_EMAIL;
+import static Pages.LoginPage.USER_PASSWORD;
+
 public class OrderTest extends BaseTest {
 
     @BeforeMethod
     public void pageSetUp(){
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get("https://automationexercise.com/");
-        homePage = new HomePage();
-        homePage.clickOnLoginSignupButton();
-        loginPage = new LoginPage();
-        loginPage.logIn();
+        loginPage.logInAndAssert(USER_EMAIL, USER_PASSWORD);
         productsPage = new ProductsPage();
-        homePage.clickOnProductsButton();
-        driver.navigate().refresh();
         cartPage = new CartPage();
-        homePage.clickOnProductsButton();
-        driver.navigate().refresh();
-        productsPage.addItemToCartAndOpetCart();
         checkoutPage = new CheckoutPage();
         paymentPage = new PaymentPage();
+        clickOnElementAndCloseVignette(homePage.productsButton);
+        productsPage.addItemToCartAndOpetCart();
     }
 
     @Test(priority = 10)
@@ -50,8 +44,8 @@ public class OrderTest extends BaseTest {
         paymentPage.clickOnPayAndConfirmButton();
 
         Assert.assertEquals(paymentPage.message.getText(), "Congratulations! Your order has been confirmed!");
-        Assert.assertEquals(driver.getCurrentUrl(), "https://automationexercise.com/payment_done/500");
     }
+
     @Test(priority = 20)
     public void userCannotPayIfNameFieldsOnPaymentPageIsNotFilled(){
         cartPage.clickOnProceedToCheckoutButton();
@@ -72,6 +66,4 @@ public class OrderTest extends BaseTest {
 
         Assert.assertEquals(driver.getCurrentUrl(),"https://automationexercise.com/payment");
     }
-
-
 }

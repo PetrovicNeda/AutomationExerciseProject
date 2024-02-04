@@ -2,25 +2,19 @@ package Tests;
 
 import BaseTest.BaseTest;
 import Pages.ContactFormPage;
-import Pages.HomePage;
-import Pages.LoginPage;
-import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.Alert;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
+import static Pages.LoginPage.USER_EMAIL;
+import static Pages.LoginPage.USER_PASSWORD;
 
 public class ContactFormTest extends BaseTest {
 
     @BeforeMethod
     public void pageSetUp() {
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get("https://automationexercise.com/");
-        homePage = new HomePage();
-        homePage.clickOnLoginSignupButton();
-        loginPage = new LoginPage();
-        loginPage.logIn();
+        loginPage.logInAndAssert(USER_EMAIL, USER_PASSWORD);
         homePage.clickOnContactButton();
         contactFormPage = new ContactFormPage();
     }
@@ -28,7 +22,7 @@ public class ContactFormTest extends BaseTest {
     @Test(priority = 10)
     public void userCanContactSiteOwners() {
         contactFormPage.inputName("Neda");
-        contactFormPage.inputMail("neda@mail.com");
+        contactFormPage.inputMail(USER_EMAIL);
         contactFormPage.inputSubject("Home Page");
         contactFormPage.inputMessage("Prikaz");
         contactFormPage.uploadImage();
