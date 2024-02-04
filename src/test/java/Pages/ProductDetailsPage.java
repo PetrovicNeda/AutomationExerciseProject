@@ -9,9 +9,10 @@ import org.testng.Assert;
 
 public class ProductDetailsPage extends BaseTest {
 
-    public ProductDetailsPage(){
+    public ProductDetailsPage() {
         PageFactory.initElements(driver, this);
     }
+
     CategoryProductsPage categoryProductsPage = new CategoryProductsPage();
 
     @FindBy(className = "product-information")
@@ -19,9 +20,9 @@ public class ProductDetailsPage extends BaseTest {
 
     //-----------------------------------------
 
-    public void checkingItemsInSubcategory(String subcategory){
+    public void checkingItemsInSubcategory(String subcategory) {
         for (int i = 0; i < categoryProductsPage.viewProductButtons.size(); i++) {
-            driver.navigate().refresh();
+            closeVignette();
             categoryProductsPage.clickOnViewProductButton(i);
             String text = productInformation.getText();
             Assert.assertTrue(text.contains(subcategory));

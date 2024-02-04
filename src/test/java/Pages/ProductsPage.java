@@ -37,8 +37,12 @@ public class ProductsPage extends BaseTest {
     @FindBy(css = "a[href='/category_products/2'")
     public WebElement topsSubcategoryButton;
     @FindBy(css = "a[href='/category_products/3'")
-
     public WebElement tshirtsSubcategoryButton;
+    @FindBy(id = "search_product")
+    public WebElement searchBox;
+    @FindBy(id = "submit_search")
+    public WebElement searchButton;
+
 //-------------------------------------------
 
 
@@ -77,5 +81,11 @@ public class ProductsPage extends BaseTest {
     public void clickOnTShirtsSubcategoryButton(){
         tshirtsSubcategoryButton.click();
     }
-
+    public void inputTextInSearchBox(String s){
+        searchBox.clear();
+        searchBox.sendKeys(s);
+    }
+    public void clickOnSearchButton(){
+        searchButton.click();
+    }
 }

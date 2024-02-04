@@ -33,4 +33,9 @@ public class BaseTest {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView(true);", element);
     }
+    public void closeVignette(){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("const elements = document.getElementsByClassName" +
+                "('adsbygoogle adsbygoogle-noablate'); while (elements.length > 0) elements[0].remove()");
+    }
 }

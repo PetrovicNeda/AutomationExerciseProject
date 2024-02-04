@@ -4,15 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47cfc9a8-26ac-46e1-bba6-bdb2d1f4d54e" name="Changes" comment="Added method checkingItemsInSubcategory">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/ContactFormPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Tests/ContactFormTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Tests/SearchBoxTest.java" afterDir="false" />
+    <list default="true" id="47cfc9a8-26ac-46e1-bba6-bdb2d1f4d54e" name="Changes" comment="Added ContactFormTest,">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/BaseTest/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BaseTest/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/CartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/CartPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/ProductDetailsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/ProductDetailsPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Pages/ProductsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/ProductsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/AddToCartTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/AddToCartTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/RemoveFromCartTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/RemoveFromCartTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/SearchBoxTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/SearchBoxTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,17 +37,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/nelej/IdeaProjects/Selenium18"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/nelej/IdeaProjects/Selenium18&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="TestNG.ContactFormTest.userCannotSubmitContactFormWithoutEmailFieldFilled">
-    <configuration name="ContactFormTest" type="TestNG" temporary="true" nameIsGenerated="true">
+}</component>
+  <component name="RunManager" selected="TestNG.SearchBoxTest.verifyThatWhenUserSearchForSpecificSubcategoryOnlyItemsFromThatSubcategoryAreDisplayed">
+    <configuration name="AddToCartTest.userCanAddOneItemToCart" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutomationExercise" />
       <extension name="coverage">
         <pattern>
@@ -57,43 +56,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.ContactFormTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ContactFormTest.test" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutomationExercise" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.ContactFormTest" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ContactFormTest.userCannotSubmitContactFormWithoutEmailFieldFilled" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutomationExercise" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.ContactFormTest" />
-      <option name="METHOD_NAME" value="userCannotSubmitContactFormWithoutEmailFieldFilled" />
+      <option name="MAIN_CLASS_NAME" value="Tests.AddToCartTest" />
+      <option name="METHOD_NAME" value="userCanAddOneItemToCart" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -119,7 +83,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RemoveFromCartTest.userCanRemoveItemFromCart" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="FilteringTest.verifyThatItemsInSubcategoryTShirtsAreTShirts" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutomationExercise" />
       <extension name="coverage">
         <pattern>
@@ -128,8 +92,44 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.RemoveFromCartTest" />
-      <option name="METHOD_NAME" value="userCanRemoveItemFromCart" />
+      <option name="MAIN_CLASS_NAME" value="Tests.FilteringTest" />
+      <option name="METHOD_NAME" value="verifyThatItemsInSubcategoryTShirtsAreTShirts" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SearchBoxTest.test" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutomationExercise" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.SearchBoxTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SearchBoxTest.verifyThatWhenUserSearchForSpecificSubcategoryOnlyItemsFromThatSubcategoryAreDisplayed" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutomationExercise" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.SearchBoxTest" />
+      <option name="METHOD_NAME" value="verifyThatWhenUserSearchForSpecificSubcategoryOnlyItemsFromThatSubcategoryAreDisplayed" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -139,11 +139,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.ContactFormTest.userCannotSubmitContactFormWithoutEmailFieldFilled" />
-        <item itemvalue="TestNG.ContactFormTest.test" />
-        <item itemvalue="TestNG.ContactFormTest" />
-        <item itemvalue="TestNG.RemoveFromCartTest.userCanRemoveItemFromCart" />
+        <item itemvalue="TestNG.SearchBoxTest.verifyThatWhenUserSearchForSpecificSubcategoryOnlyItemsFromThatSubcategoryAreDisplayed" />
+        <item itemvalue="TestNG.SearchBoxTest.test" />
+        <item itemvalue="TestNG.FilteringTest.verifyThatItemsInSubcategoryTShirtsAreTShirts" />
         <item itemvalue="TestNG.FilteringTest.verifyThatItemsInSubcategoryDressesAreDresses" />
+        <item itemvalue="TestNG.AddToCartTest.userCanAddOneItemToCart" />
       </list>
     </recent_temporary>
   </component>
@@ -324,7 +324,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706912494132</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Added ContactFormTest,">
+      <option name="closed" value="true" />
+      <created>1706962224908</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1706962224908</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -346,7 +354,8 @@
     <MESSAGE value="Added new WebElements" />
     <MESSAGE value="Added tests" />
     <MESSAGE value="Added method checkingItemsInSubcategory" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added method checkingItemsInSubcategory" />
+    <MESSAGE value="Added ContactFormTest," />
+    <option name="LAST_COMMIT_MESSAGE" value="Added ContactFormTest," />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -361,13 +370,13 @@
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/Tests/FilteringTest.java</url>
-          <line>52</line>
-          <properties class="Tests.FilteringTest" method="verifyThatItemsInSubcategoryTShirtsAreTShirts">
+          <url>file://$PROJECT_DIR$/src/test/java/Tests/SearchBoxTest.java</url>
+          <line>33</line>
+          <properties class="Tests.SearchBoxTest" method="test">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
-          <option name="timeStamp" value="4" />
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

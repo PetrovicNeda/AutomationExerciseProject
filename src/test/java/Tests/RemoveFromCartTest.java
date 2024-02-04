@@ -32,6 +32,7 @@ public class RemoveFromCartTest extends BaseTest {
         cartPage = new CartPage();
         homePage.clickOnProductsButton();
         driver.navigate().refresh();
+        homePage.clickOnProductsButton();
         productsPage.addItemToCartAndOpetCart();
     }
 

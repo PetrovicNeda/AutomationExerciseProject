@@ -36,13 +36,14 @@ public class AddToCartTest extends BaseTest {
         wait = new WebDriverWait(driver, Duration.ofSeconds(2));
         productsPage = new ProductsPage();
         cartPage = new CartPage();
+        homePage.clickOnProductsButton();
+        driver.navigate().refresh();
+        homePage.clickOnProductsButton();
+        scrollToElement(productsPage.poloButton);
     }
 
     @Test(priority = 10)
     public void userCanAddOneItemToCart() {
-        homePage.clickOnProductsButton();
-        driver.navigate().refresh();
-        scrollToElement(productsPage.poloButton);
         productsPage.clickOnAddToCartButton(0);
 
         wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".btn.btn-success.close-modal.btn-block")));
@@ -54,9 +55,7 @@ public class AddToCartTest extends BaseTest {
 
     @Test(priority = 20)
     public void userCanAddToCartMultipleItems() {
-        homePage.clickOnProductsButton();
-        driver.navigate().refresh();
-        scrollToElement(productsPage.poloButton);
+
         productsPage.clickOnAddToCartButton(0);
 
         wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".btn.btn-success.close-modal.btn-block")));
@@ -77,9 +76,6 @@ public class AddToCartTest extends BaseTest {
 
     @Test(priority = 30)
     public void userCanAddOneItemMultipleTimes() {
-        homePage.clickOnProductsButton();
-        driver.navigate().refresh();
-        scrollToElement(productsPage.poloButton);
         int counter = 0;
         for (int i = 0; i < 5; i++) {
             productsPage.clickOnAddToCartButton(0);
