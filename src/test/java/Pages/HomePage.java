@@ -21,6 +21,8 @@ public class HomePage extends BaseTest {
     public WebElement productsButton;
     @FindBy(css = "a[href='/contact_us'")
     public WebElement contactButton;
+    @FindBy(css = "a[href='/delete_account'")
+    public WebElement deleteAccButton;
 
 
     //-----------------------------
@@ -36,5 +38,8 @@ public class HomePage extends BaseTest {
     }
     public void clickOnContactButton(){
         contactButton.click();
+    }
+    public void clickOnDeleteAccButton(){
+        deleteAccButton.click();
     }
 }

@@ -75,5 +75,12 @@ public class LoginPage extends BaseTest {
         Assert.assertTrue(homePage.logoutButton.isDisplayed());
         Assert.assertNotEquals(driver.getCurrentUrl(), "https://automationexercise.com/login");
     }
+    public void logIn(String email, String password){
+        inputEmail(email);
+        inputPassword(password);
+        clickOnLoginButton();
+        Assert.assertTrue(homePage.logoutButton.isDisplayed());
+        Assert.assertNotEquals(driver.getCurrentUrl(), "https://automationexercise.com/login");
+    }
 
 }

@@ -23,6 +23,7 @@ public class BaseTest {
     public CheckoutPage checkoutPage;
     public PaymentPage paymentPage;
     public ContactFormPage contactFormPage;
+    public DeleteAccPage deleteAccPage;
     @BeforeClass
     public void setUp() {
         WebDriverManager.chromedriver().setup();

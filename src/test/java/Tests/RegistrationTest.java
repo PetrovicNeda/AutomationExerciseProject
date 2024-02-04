@@ -7,6 +7,7 @@ import Pages.LoginPage;
 import Pages.RegistrationPage;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -26,7 +27,7 @@ public class RegistrationTest extends BaseTest {
     }
 
     @Test
-    public void userCanRegistrateWithAllMandatoryFieldsFilled() {
+    public void userCanRegistrateWithAllMandatoryFieldsFilled(){
         String name = "korisnik";
         String email = "korisnik@mail.com";
         loginPage.inputNameForSignup(name);
@@ -99,6 +100,10 @@ public class RegistrationTest extends BaseTest {
 
         Assert.assertTrue(registrationPage.createAccButton.isDisplayed());
         Assert.assertEquals(driver.getCurrentUrl(), "https://automationexercise.com/signup");
+    }
+    @AfterMethod
+    public void tearDown(){
+        driver.quit();
     }
 }
 
