@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47cfc9a8-26ac-46e1-bba6-bdb2d1f4d54e" name="Changes" comment="Refactored BeforeMethods and added clickAndCloseVignette method">
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/CheckoutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/CheckoutPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/ContactFormPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/ContactFormPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/DeleteAccPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/DeleteAccPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/LoginPage.java" afterDir="false" />
+    <list default="true" id="47cfc9a8-26ac-46e1-bba6-bdb2d1f4d54e" name="Changes" comment="Formatted and removed unused code">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/RegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/RegistrationPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/RegistrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/RegistrationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,11 +23,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="JavaAutoRunManager">
-    <enabled-run-configurations>
-      <run-configuration type="TestNG" name="AddToCartTest" />
-    </enabled-run-configurations>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
@@ -49,8 +42,8 @@
     &quot;last_opened_file_path&quot;: &quot;C:/Users/nelej/IdeaProjects/Selenium18&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.LoginTest.userCanLogInWithValidCredentials">
-    <configuration name="LoginTest.userCanLogInWithValidCredentials" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.RegistrationTest.userCannotSingUpWithEmptyMandatoryField">
+    <configuration name="DeleteAccTest.userCanDeleteAccount" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutomationExercise" />
       <extension name="coverage">
         <pattern>
@@ -59,8 +52,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.LoginTest" />
-      <option name="METHOD_NAME" value="userCanLogInWithValidCredentials" />
+      <option name="MAIN_CLASS_NAME" value="Tests.DeleteAccTest" />
+      <option name="METHOD_NAME" value="userCanDeleteAccount" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -85,7 +78,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RegistrationTest.userCannotSingupWithEmptyMandatoryField" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="RegistrationTest.userCanRegisterWithAllMandatoryFieldsFilled" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutomationExercise" />
       <extension name="coverage">
         <pattern>
@@ -95,7 +88,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
       <option name="MAIN_CLASS_NAME" value="Tests.RegistrationTest" />
-      <option name="METHOD_NAME" value="userCannotSingupWithEmptyMandatoryField" />
+      <option name="METHOD_NAME" value="userCanRegisterWithAllMandatoryFieldsFilled" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -103,7 +96,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RemoveFromCartTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="RegistrationTest.userCannotSingUpWithEmailAlreadyExist" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutomationExercise" />
       <extension name="coverage">
         <pattern>
@@ -112,15 +105,16 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.RemoveFromCartTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="MAIN_CLASS_NAME" value="Tests.RegistrationTest" />
+      <option name="METHOD_NAME" value="userCannotSingUpWithEmailAlreadyExist" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchBoxTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="RegistrationTest.userCannotSingUpWithEmptyMandatoryField" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutomationExercise" />
       <extension name="coverage">
         <pattern>
@@ -129,8 +123,9 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.SearchBoxTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="MAIN_CLASS_NAME" value="Tests.RegistrationTest" />
+      <option name="METHOD_NAME" value="userCannotSingUpWithEmptyMandatoryField" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -139,10 +134,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.LoginTest.userCanLogInWithValidCredentials" />
-        <item itemvalue="TestNG.SearchBoxTest" />
-        <item itemvalue="TestNG.RemoveFromCartTest" />
-        <item itemvalue="TestNG.RegistrationTest.userCannotSingupWithEmptyMandatoryField" />
+        <item itemvalue="TestNG.RegistrationTest.userCannotSingUpWithEmptyMandatoryField" />
+        <item itemvalue="TestNG.RegistrationTest.userCanRegisterWithAllMandatoryFieldsFilled" />
+        <item itemvalue="TestNG.RegistrationTest.userCannotSingUpWithEmailAlreadyExist" />
+        <item itemvalue="TestNG.DeleteAccTest.userCanDeleteAccount" />
         <item itemvalue="TestNG.RegistrationTest" />
       </list>
     </recent_temporary>
@@ -356,7 +351,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707075184887</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Formatted and removed unused code">
+      <option name="closed" value="true" />
+      <created>1707077453750</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1707077453750</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -382,7 +385,8 @@
     <MESSAGE value="Added test for search box" />
     <MESSAGE value="Added test for deleting account" />
     <MESSAGE value="Refactored BeforeMethods and added clickAndCloseVignette method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored BeforeMethods and added clickAndCloseVignette method" />
+    <MESSAGE value="Formatted and removed unused code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Formatted and removed unused code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -398,17 +402,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/Tests/RegistrationTest.java</url>
-          <line>22</line>
-          <properties class="Tests.RegistrationTest" method="userCanRegistrateWithAllMandatoryFieldsFilled">
+          <line>20</line>
+          <properties class="Tests.RegistrationTest" method="userCanRegisterWithAllMandatoryFieldsFilled">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/Tests/LoginTest.java</url>
-          <line>12</line>
-          <option name="timeStamp" value="10" />
+          <url>file://$PROJECT_DIR$/src/test/java/Tests/AddToCartTest.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

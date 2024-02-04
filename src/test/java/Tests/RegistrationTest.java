@@ -8,7 +8,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import static Pages.LoginPage.EMAIL_FOR_REGISTRATION_AND_DELETING;
-import static Pages.LoginPage.PASSWORD_FOR_REGISTRATION_AND_DELETING;
 
 public class RegistrationTest extends BaseTest {
 
@@ -19,42 +18,21 @@ public class RegistrationTest extends BaseTest {
     }
 
     @Test
-    public void userCanRegistrateWithAllMandatoryFieldsFilled() {
-        String name = "korisnik";
-
-        loginPage.inputNameForSignup(name);
+    public void userCanRegisterWithAllMandatoryFieldsFilled() {
+        loginPage.inputNameForSignup(registrationPage.name);
         loginPage.inputEmailForSignup(EMAIL_FOR_REGISTRATION_AND_DELETING);
         loginPage.clickOnSignupButton();
         Assert.assertEquals(driver.getCurrentUrl(), "https://automationexercise.com/signup");
 
-
-        String firstName = "Petar";
-        String lastName = "Petrovic";
-        String address = "Address 1";
-        String state = "State";
-        String city = "City";
-        String zipcode = "123000";
-        String mobile = "0632568455";
-        registrationPage.inputPassword(PASSWORD_FOR_REGISTRATION_AND_DELETING);
-        scrollToElement(registrationPage.firstNameField);
-        registrationPage.inputFirstName(firstName);
-        registrationPage.inputLastName(lastName);
-        registrationPage.inputAddress(address);
-        registrationPage.clickOnCountryDropDownMenu("Australia");
-        registrationPage.inputState(state);
-        registrationPage.inputCity(city);
-        registrationPage.inputZipcode(zipcode);
-        registrationPage.inputMobile(mobile);
-        registrationPage.clickOnCreateAccButton();
+        registrationPage.fillRegisterForm();
         Assert.assertEquals(driver.getCurrentUrl(), "https://automationexercise.com/account_created");
         Assert.assertTrue(accCreatedPage.continueButton.isDisplayed());
         Assert.assertTrue(accCreatedPage.message.isDisplayed());
     }
 
     @Test(priority = 20)
-    public void userCannotSingupWithEmailAlreadyExist() {
-        String name = "korisnik";
-        loginPage.inputNameForSignup(name);
+    public void userCannotSingUpWithEmailAlreadyExist() {
+        loginPage.inputNameForSignup(registrationPage.name);
         loginPage.inputEmailForSignup(EMAIL_FOR_REGISTRATION_AND_DELETING);
         loginPage.clickOnSignupButton();
         Assert.assertEquals(loginPage.errorSignupMessage.getText(), "Email Address already exist!");
@@ -62,34 +40,13 @@ public class RegistrationTest extends BaseTest {
     }
 
     @Test(priority = 30)
-    public void userCannotSingupWithEmptyMandatoryField() {
-        String name = "korisnik";
-        String email = "korisnik2@mail.com";
-        loginPage.inputNameForSignup(name);
-        loginPage.inputEmailForSignup(email);
+    public void userCannotSingUpWithEmptyMandatoryField() {
+        loginPage.inputNameForSignup(registrationPage.name);
+        loginPage.inputEmailForSignup(registrationPage.emailNew);
         loginPage.clickOnSignupButton();
         Assert.assertEquals(driver.getCurrentUrl(), "https://automationexercise.com/signup");
 
-        String password = "korisnik123";
-//        String firstName = "Petar";
-        String lastName = "Petrovic";
-        String address = "Address 1";
-        String state = "State";
-        String city = "City";
-        String zipcode = "123000";
-        String mobile = "0632568455";
-        registrationPage.inputPassword(password);
-        scrollToElement(registrationPage.firstNameField);
-//        registrationPage.inputFirstName(firstName);
-        registrationPage.inputLastName(lastName);
-        registrationPage.inputAddress(address);
-        registrationPage.clickOnCountryDropDownMenu("Australia");
-        registrationPage.inputState(state);
-        registrationPage.inputCity(city);
-        registrationPage.inputZipcode(zipcode);
-        registrationPage.inputMobile(mobile);
-        registrationPage.clickOnCreateAccButton();
-
+        registrationPage.fillRegistrationFormWithoutOneMandatoryField();
         Assert.assertTrue(registrationPage.createAccButton.isDisplayed());
         Assert.assertEquals(driver.getCurrentUrl(), "https://automationexercise.com/signup");
     }
